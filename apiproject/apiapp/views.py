@@ -27,7 +27,7 @@ def booksAPI(request):
     elif request.method == 'POST':
         #클라이언트에서 전송된 데이터를 가지고 Model 인스턴스 생성
         serializer = BookSerializer(data = request.data)
-        #유효성 검사르 ㄹ수해애서 통과하면 삽입, 실패하면 이유 출력
+        #유효성 검사를 수행해서 통과하면 삽입, 실패하면 이유 출력
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
