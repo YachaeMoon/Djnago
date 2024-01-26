@@ -1,0 +1,640 @@
+<!doctype html>
+	<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>[##_page_title_##]</title>
+		<link rel="stylesheet" href="./style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		
+
+		
+		<!--코드블럭 monokai-sublime 시작-->
+		<link rel="stylesheet" href="./images/horizon-dark.min.css">
+		<script src="./images/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
+		<!--<script src="./images/linenumberV2.js"></script>-->
+		<!--코드블럭 monokai-sublime 끝-->
+
+        <!-- 코드블럭 monokai-sublime 시작-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/테마이름.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <!--코드블럭 monokai-sublime 끝 -->
+
+
+		<!-- 플로팅 목차 시작 -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+		<!-- 플로팅 목차 끝 -->
+
+		<script src="//t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({
+				"HTML-CSS": {
+					messageStyle: "normal",
+					linebreaks: {
+						automatic: true,  // 줄바꿈을 자동으로 처리하도록 설정합니다.
+						width: "container"  // div 영역을 넘어가면 줄바꿈합니다.
+					}
+				},
+				tex2jax: { 
+					inlineMath: [["$","$"],["\\(","\\)"]], 
+					displayMath: [["$$","$$"],["\\[","\\]"]], 
+					processEscapes: true
+				},
+				TeX: {
+					Macros: {
+						tr: "{\\scriptscriptstyle\\mathrm{T}}",
+					}
+				}
+			});
+		</script>
+		<script src="./images/jquery.toc.min.js"></script>
+	</head>
+
+	<body id="[##_body_id_##]">
+		<s_t3>
+			<div class="navbar">
+				<div class="navbar-block">
+					<button class="navbar-btn">
+						<i class="fa-solid fa-bars"></i>
+					</button>
+					<div class="blog_title"><a href="[##_blog_link_##]">[##_title_##]</a></div>
+				</div>
+				<div class="search">
+					<s_search>
+						<input
+							class="sbar"
+							type="text"
+							placeholder="Search"
+							name="[##_search_name_##]" 
+							value="[##_search_text_##]" 
+							onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }"/>
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</s_search>
+				</div>
+				<div class="navbar-block">
+					<div class="blog_img">
+						<a href="https://www.tistory.com/">[##_blog_image_##]</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="container">
+
+				<div class="sidebar">
+
+					<s_sidebar>
+						<s_sidebar_element>
+							<!-- Write -->
+							<a href="https://yachae4910.tistory.com/manage/post">
+								<div class="sidebar-item">
+									<i class="fa-sharp fa-solid fa-pen-to-square"></i>
+									<p>Write</p>
+								</div>
+							</a>
+						</s_sidebar_element>
+					</s_sidebar>
+
+					<s_sidebar>
+						<s_sidebar_element>
+							<!-- Setting -->
+							<a href="https://yachae4910.tistory.com/manage">
+								<div class="sidebar-item">
+									<i class="fa-solid fa-screwdriver-wrench"></i>
+									<p>Setting</p>
+								</div>
+							</a>
+						</s_sidebar_element>
+					</s_sidebar>
+
+					<s_sidebar>
+						<s_sidebar_element>
+							<!-- About Me -->
+							<a href="won2594.dothome.co.kr">
+								<div class="sidebar-item">
+									<i class="fa-solid fa-user"></i>
+									<p>About Me</p>
+								</div>
+							</a>
+						</s_sidebar_element>
+					</s_sidebar>
+
+					<s_sidebar>
+						<s_sidebar_element>
+							<!-- Category -->
+							<div class="sidebar-category">
+								[##_category_list_##]
+							</div>
+						</s_sidebar_element>
+					</s_sidebar>
+
+					<s_sidebar>
+						<s_sidebar_element>
+							<!-- Theme Button -->
+							<div class="sidebar-theme">
+								<div class="theme-info" id="theme">
+									Dark
+								</div>
+								<label class="switch" onclick="toggleTheme()">
+									<input type="checkbox" id="themeToggle">
+									<span class="slider round"></span>
+								</label>
+							</div>
+						</s_sidebar_element>
+					</s_sidebar>
+
+					<s_sidebar>
+						<s_sidebar_element>
+							<!-- Empty div -->
+							<div class="empty-div">
+							</div>
+						</s_sidebar_element>
+					</s_sidebar>
+				</div>
+
+				<div class="content">
+
+
+					<s_list>
+						<div class="searchList">
+							<s_list_rep>
+								<div class="one_article">
+									<a href="[##_list_rep_link_##]">
+										<div class="thumbnail">
+											<s_article_rep_thumbnail>
+												<img src="[##_article_rep_thumbnail_url_##]" alt="no image">
+											</s_article_rep_thumbnail>
+										</div>
+										<div class="title">
+											[##_list_rep_title_##]
+										</div>
+										<div class="summary">
+											[##_list_rep_summary_##]
+										</div>
+										<div class="date">
+											[##_list_rep_regdate_##]
+										</div>
+									</a>
+									<div class="category">
+										<a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a> 
+									</div>
+								</div>
+							</s_list_rep>
+						</div>
+						<s_paging>
+							<div class="paging">
+								<a [##_prev_page_##] class="[##_no_more_prev_##]">
+									Prev
+								</a>
+								<span class="numbox">
+									<s_paging_rep>
+										<a [##_paging_rep_link_##] class="num">[##_paging_rep_link_num_##]</a>
+									</s_paging_rep>
+								</span>
+								<a [##_next_page_##] class="[##_no_more_next_##]">
+									Next
+								</a>
+							</div>
+						</s_paging>
+					</s_list>
+
+					<s_article_protected>
+						<div class="entryProtected">
+							<h2><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h2>
+							<span class="date">[##_article_rep_date_##]</span>
+							<hr/>
+							<p>This is a protected article. Please enter the password.</p>
+							<p><label for="[##_article_password_##]">Password :</label>
+								<input type="password" maxlength="16" id="[##_article_password_##]" name="[##_article_password_##]" value="" onkeydown="if (event.keyCode == 13)[##_article_dissolve_##]" />
+								<input type="button" class="submit" value="submit" onclick="[##_article_dissolve_##]" />
+							</p>
+						</div>
+					</s_article_protected>
+
+					<s_article_rep>
+					<div class="entry_wrap">
+
+						<div class="entry">
+							<div class="titleWrap">
+								<div class="category">
+									<a href="[##_article_rep_category_link_##]">
+										[##_article_rep_category_##]
+									</a> 
+								</div> 
+								<h2>
+									<a href="[##_article_rep_link_##]">
+									[##_article_rep_title_##]
+									</a>
+								</h2>
+								<div class="info">
+									<div class="author">[##_article_rep_author_##]</div>
+									<div class="date"><span>|</span>[##_article_rep_date_##]</div>
+									<s_ad_div>
+										<div class="admin">
+											<a href="[##_s_ad_m_link_##]">Modify</a>
+											<a href="#" onclick="[##_s_ad_d_onclick_##]">Delete</a>
+										</div>
+									</s_ad_div>
+									<button id="removeButton"><i class="fa-solid fa-print"></i></button>
+								</div>
+							</div>
+							<div class="article">
+								<div class="article_content">
+									[##_article_rep_desc_##]
+									<div>
+										<s_tag_label>
+											<div class="tagTrail">
+												<span class="tagText"># </span> 
+												[##_tag_label_rep_##]
+											</div>
+										</s_tag_label>
+									</div>
+									<!-- progress circle -->
+									<div class="progress-circle">
+										<input type="text" class="dial"/>
+										<div class="top-btn"><i class="fa-solid fa-plane-up"></i></div>
+									</div>
+
+									<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/72900/jquery.knob.min.js"></script>
+
+									<script>
+										$(document).ready(function() {
+											var offset = 90,
+													scroll_top_duration = 700,
+													$go_top = $('.top-btn'),
+													$thedial = $('.dial'),
+													$progress_circle = $('.progress-circle');
+
+											const rootStyles = getComputedStyle(document.documentElement);
+											const highlight = rootStyles.getPropertyValue('--highlight-color');
+											// Initialize the progress dial
+											$thedial.knob( {
+												'min' : 0,
+												'max' : 100,
+												'width' : 30,
+												'height' : 30,
+												'fgColor' : highlight,
+												'bgColor' : 'transparent',
+												'skin' : 'tron',
+												'thickness' : .1,
+												'displayInput' : false,
+												'displayPreview' : false,
+												'readOnly' : true
+											});
+
+											$(window).scroll(function() {
+												// Hide or show the progress bar
+												($(this).scrollTop() > offset) ? $progress_circle.addClass('is-visible') : $progress_circle.removeClass('is-visible');
+												// Get the window position and set it to a variale
+												var s = $(window).scrollTop(),
+														d = $(document).height(),
+														c = $(window).height();
+												scrollPercent = (s / (d-c)) * 100;
+
+												// Bind the window position to the progress dial
+												$('.dial').val(scrollPercent).change();
+											});
+
+											//smooth scroll to top
+											$go_top.on('click', function(e) {
+												e.preventDefault();
+												$('body,html').animate( {
+													scrollTop: 0 ,
+												}, scroll_top_duration);
+											});
+										});
+									</script>
+									<!-- progress circle done -->
+								</div>
+							</div>	
+							<s_rp>
+								<div class="comment">
+									<div class="actionTrail">
+										<a href="#rp" onclick="[##_article_rep_rp_link_##]">
+											<s_rp_count>
+												Comment <span class="cnt">[##_article_rep_rp_cnt_##]</span>
+											</s_rp_count>
+										</a>
+									</div>
+
+									<s_rp_input_form>
+									<div class="commentWrite">
+										<div class="comment_input_box">
+											<s_rp_member>
+												<s_rp_guest>
+												<div class="guset_input_box">
+													<input type="text" name="[##_rp_input_name_##]" value="[##_guest_name_##]" placeholder="NAME"/>
+													<input type="password" maxlength="8" name="[##_rp_input_password_##]" value="[##_rp_admin_check_##]" placeholder="PASSWORD"/>
+												</div>
+												</s_rp_guest>
+											</s_rp_member>
+											<textarea 
+												placeholder="Add a comment..."
+												name="[##_rp_input_comment_##]" 
+												></textarea>
+										</div>
+										
+										<div class="write_box">
+											<p class="secretWrap">
+												<label for="secret" style="font-size: 11px"> SECRET </label>
+												<input type="checkbox" name="[##_rp_input_is_secret_##]" id="sercret_check" />
+											</p>
+											<p>
+												<input type="submit" value="WRITE" onclick="[##_rp_onclick_submit_##]" id="write_btn" />
+											</p>
+										</div>
+									</div> 
+									</s_rp_input_form>
+									
+									<div class="commentList">
+										<s_rp_container>
+										<ol>
+											<s_rp_rep>
+											<li id='[##_rp_rep_id_##]'>
+												<div class="[##_rp_rep_class_##]">
+													<div class="top">
+														<img src="[##_rp_rep_logo_##]" alt=""></img>
+														<span class="name">[##_rp_rep_name_##]</span>
+														<span class="date"> [##_rp_rep_date_##]</span>
+													</div>
+													
+													<div class="mid">
+														<p class="rep">[##_rp_rep_desc_##]</p>
+													</div>
+													<div class="bottom">
+														<a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="modify">Delete</a>
+														<a href="#" onclick="[##_rp_rep_onclick_reply_##]" class="write">Reply</a>
+													</div>
+												</div>
+												<s_rp2_container> 
+												<ul>
+													<s_rp2_rep>
+														<li id='[##_rp_rep_id_##]'>
+															<div class="[##_rp_rep_class_##]">
+																<div class="top">
+																	<img src="[##_rp_rep_logo_##]" alt=""></img>
+																	<span class="name">[##_rp_rep_name_##]</span>
+																	<span class="date"> [##_rp_rep_date_##]</span>
+																</div>
+																<div class="mid">
+																	<p class="rep">[##_rp_rep_desc_##]</p>
+																</div>
+																<div class="bottom">
+																		<a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="modify">Delete</a>
+																</div>
+															</div>
+														</li>
+													</s_rp2_rep>
+												</ul>
+												</s_rp2_container>
+											</li>
+											</s_rp_rep>
+										</ol>
+										</s_rp_container>
+									</div>
+
+								</div>
+							</s_rp>
+						</div>
+						<div class='toc'></div>
+					</div>
+					</s_article_rep>
+
+					
+					<footer>
+						<a href="https://ushin20-skin.tistory.com/entry/Youtube-%EC%9C%A0%ED%8A%9C%EB%B8%8C-%ED%85%8C%EB%A7%88-%EC%A0%9C%EC%9E%91%EC%99%84%EB%A3%8C">uTube</a>· Designed By <a href="https://ushin20.github.io">ushin20</a>
+					</footer>
+					
+
+				</div>
+			</div>
+
+			<script src="./images/script.js"></script>
+			<script>
+				const navbarBtn = document.querySelector('.navbar-btn');
+				const sidebar = document.querySelector('.sidebar');
+				const sidebar_closeBtn = document.querySelector('.sidebar-closeBtn');
+				function isMediaQueryActive() {
+					// Replace the condition with your specific media query check
+					return window.matchMedia('(max-width: 768px)').matches;
+				}
+				
+				navbarBtn.addEventListener('click', function() {
+					if (isMediaQueryActive()) {
+						// Media query is active, so reverse the behavior
+						if (sidebar.classList.contains('hidden')) {
+							sidebar.classList.remove('hidden');
+							localStorage.setItem('sidebar', 'close');
+						} else {
+							sidebar.classList.add('hidden');
+							localStorage.setItem('sidebar', 'open');
+						}
+					} else {
+						// Media query is not active, maintain the original behavior
+						if (sidebar.classList.contains('hidden')) {
+							sidebar.classList.remove('hidden');
+							localStorage.setItem('sidebar', 'open');
+						} else {
+							sidebar.classList.add('hidden');
+							localStorage.setItem('sidebar', 'close');
+						}
+					}
+				});
+
+				sidebar_closeBtn.addEventListener('click', function() {
+					sidebar.classList.toggle('hidden');
+					localStorage.setItem('sidebar', 'close');
+				});
+
+				$(document).ready(function() {
+					const sidebar = document.querySelector('.sidebar');
+					var sidebar_state = localStorage.getItem('sidebar');
+
+					if (isMediaQueryActive()) {
+						if (sidebar_state === 'open') {
+							// if sidebar is sidebar hidden, change it to sidebar
+							sidebar.classList.add('hidden');
+						} else {
+							// if sidebar is sidebar, change it to sidebar hidden
+							sidebar.classList.remove('hidden');
+						}
+					} else {
+						if (sidebar_state === 'open') {
+							// if sidebar is sidebar hidden, change it to sidebar
+							sidebar.classList.remove('hidden');
+						} else {
+							// if sidebar is sidebar, change it to sidebar hidden
+							sidebar.classList.add('hidden');
+						}
+					}
+				});
+			</script>
+			<script>
+				function toggleTheme() {
+					var theme_content = document.getElementById('theme');
+					var btn_toggle = document.getElementById('themeToggle');
+					if (themeToggle.checked) {
+							setTheme('dark');
+							theme_content.innerHTML = "dark";
+					} else {
+							setTheme('light');
+							theme_content.innerHTML = "light";
+					}
+				}
+				function setTheme(theme) {
+					if (theme === 'light') {
+						document.documentElement.style.setProperty('--dark-bg-color', '#fefefe');
+						document.documentElement.style.setProperty('--dark-bg-second-color', 'whitesmoke');
+						document.documentElement.style.setProperty('--dark-font-color', 'rgb(30, 31, 33)');
+						document.documentElement.style.setProperty('--sidebar-hr-color', 'rgba(0, 0, 0, 0.2)');
+						localStorage.setItem('theme', 'light');
+					} else {
+						document.documentElement.style.setProperty('--dark-bg-color', 'rgb(30, 31, 33)');
+						document.documentElement.style.setProperty('--dark-bg-second-color', 'rgb(50, 51, 53)');
+						document.documentElement.style.setProperty('--dark-font-color', '#fefefe');
+						document.documentElement.style.setProperty('--sidebar-hr-color', 'rgba(255, 255, 255, 0.2)');
+						localStorage.setItem('theme', 'dark');
+					}
+				}
+				$(document).ready(function() {
+					var theme_content = document.getElementById('theme');
+					var theme = localStorage.getItem('theme');
+					if (theme === 'dark') {
+						$('#themeToggle').prop('checked', true);
+						setTheme('dark');
+						theme_content.innerHTML = "dark";
+					} else {
+						$('#themeToggle').prop('checked', false);
+						setTheme('light');
+						theme_content.innerHTML = "light";
+					}
+				});
+			</script>
+			<script>
+				var content = document.querySelector(".contents_style");
+				var headings = content.querySelectorAll("h1, h2, h3, h4, h5, h6, h7");
+				var headingMap = {};
+
+				Array.prototype.forEach.call(headings, function (heading) {
+					var id = heading.id
+						? heading.id
+						: heading.textContent
+								.trim()
+								.toLowerCase()
+								.split(" ")
+								.join("-")
+								.replace(/[\!\@\#\$\%\^\&\*\(\):]/gi, "");
+					headingMap[id] = !isNaN(headingMap[id]) ? ++headingMap[id] : 0;
+					if (headingMap[id]) {
+						heading.id = id + "-" + headingMap[id];
+					} else {
+						heading.id = id;
+					}
+				});
+
+				tocbot.init({
+					tocSelector: ".toc",
+					contentSelector: ".contents_style",
+					headingSelector: "h2, h3, h4",
+					hasInnerContainers: false,
+				});
+
+				$(document).ready(function () {
+					$(".toc").addClass("toc-absolute");
+
+					var toc_top = $(".toc").offset().top - 165;
+					$(window).scroll(function () {
+						if ($(this).scrollTop() >= toc_top) {
+							$(".toc").addClass("toc-fixed");
+							$(".toc").removeClass("toc-absolute");
+						} else {
+							$(".toc").addClass("toc-absolute");
+							$(".toc").removeClass("toc-fixed");
+						}
+					});
+				});
+			</script>
+			<script>
+        function removeElementByClassName(className) {
+						var elements = document.getElementsByClassName(className);
+						var element = elements[0];
+						if (element) {
+								element.parentNode.removeChild(element);
+						}
+				}
+				function change_header_style() {
+						var h3Elements = document.querySelectorAll('h3');
+						var h4Elements = document.querySelectorAll('h4');
+
+						// 선택된 h3 요소에 스타일 적용
+						h3Elements.forEach(function(element) {
+								element.style.color = 'black'; 
+								element.style.fontWeight = 'bold'; 
+								element.style.borderBottom = '1px solid black';
+								element.style.paddingTop = "0.5em";
+								element.style.marginBottom = '5px';
+						});
+
+						// 선택된 h4 요소에 스타일 적용
+						h4Elements.forEach(function(element) {
+								element.style.color = 'black'; 
+								element.style.fontWeight = 'bold'; 
+								element.style.borderBottom = '1px solid black';
+								element.style.paddingBottom = '5px';
+								element.style.marginBottom = '5px';
+						});
+				}
+        document.getElementById('removeButton').addEventListener('click', function() {
+            removeElementByClassName('navbar');
+            removeElementByClassName('sidebar');
+            removeElementByClassName('container_postbtn');
+            removeElementByClassName('another_category');
+            removeElementByClassName('tagTrail');
+            removeElementByClassName('tt_box_namecard');
+            removeElementByClassName('comment');
+            removeElementByClassName('btn_menu_toolbar');
+            removeElementByClassName('progress-circle');
+            removeElementByClassName('toc');
+            removeElementByClassName('category');
+						change_header_style();
+
+						var container = document.getElementsByClassName('container')[0];
+						container.style.marginTop = 0;
+						var titleWrap = document.getElementsByClassName('titleWrap')[0];
+						titleWrap.style.marginTop = 0;
+						var entry = document.getElementsByClassName('entry')[0];
+						entry.style.maxWidth = "100%";
+						var title = document.getElementsByClassName('titleWrap')[0];
+						title.style.marginBottom = 0;
+						title.style.alignItems = "initial";
+						var author = document.getElementsByClassName('author')[0];
+						author.style.color = "black";
+						var article_content = document.getElementsByClassName('article_content')[0];
+						article_content.style.padding = 0;
+						article_content.style.marginTop = "10px";
+
+						var titleWrapH2Element = document.querySelectorAll('.titleWrap h2')[0];
+						titleWrapH2Element.style.textAlign = "left";
+
+						// 모든 제거 완료
+        });
+    	</script>
+			<script>
+				var footer = document.querySelector("footer");
+				var copyrightText =
+						'<a href="https://ushin20-skin.tistory.com/entry/Youtube-%EC%9C%A0%ED%8A%9C%EB%B8%8C-%ED%85%8C%EB%A7%88-%EC%A0%9C%EC%9E%91%EC%99%84%EB%A3%8C">uTube</a>· Designed By <a href="https://ushin20.github.io">ushin20</a>';
+				if (!footer.innerHTML.includes(copyrightText)) {
+						// If not present, add the copyright text to the footer
+						var copyrightElement = document.createElement("div");
+						copyrightElement.innerHTML = copyrightText;
+						footer.appendChild(copyrightElement);
+				}
+			</script>
+		</s_t3>
+	</body>
+
+
+	</html>
