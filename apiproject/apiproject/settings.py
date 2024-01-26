@@ -77,7 +77,7 @@ WSGI_APPLICATION = "apiproject.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
+        "ENGINE": "django.db.backends.mysql",
         "NAME": "frameDjango",
         "USER": "root", 
         "PASSWORD":"0000",
@@ -111,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "ASIA/Seoul"
+TIME_ZONE = "Asia/Seoul"
 
 USE_I18N = True
 
